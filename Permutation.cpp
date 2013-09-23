@@ -2,13 +2,17 @@
 
 using namespace std;
 
-int count(int m,int n){
-	int p(1),q(1);
-	for(;n>0;m--,n--){
-		p=p*m;
-		q=q*n;
+unsigned int count(int m,int n){
+	unsigned int p(1);
+
+        for(int i=1;i<=n;m--,i++){
+
+		p=p*m/i;
+
 	}
-	return p/q;
+
+	return p;
+
 }
 
 void main(){
